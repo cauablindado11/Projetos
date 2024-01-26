@@ -1,0 +1,18 @@
+/* ⇩⇩ Importação da fonte 'Bebas Neue' do Google Fonts ⇩⇩ */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* ⇩⇩ Estilos para o corpo da página ⇩⇩ */
+body {
+    overflow-x: hidden; /* Evita a rolagem horizontal da página */
+    font-family: 'Bebas Neue', sans-serif; /* Aplica a fonte 'Bebas Neue' ao texto da página */
+    background-color: #f1f5f8; /* Define a cor de fundo do corpo da página */
+}
+
+/* ⇩⇩ Estilos para a estilização de elementos 'select' ⇩⇩ */
+select {
+    border: 0px; /* Remove a borda do elemento 'select' */
+    background-color: #fff; /* Define a cor de fundo do elemento 'select' como branco */
+
+    cursor: pointer; /* Altera o cursor para a forma de ponteiro ao passar sobre o elemento 'select' */
+    width: 100%; /* Define a largura do elemento 'select' como 100% da largura do seu contêiner */
+}
