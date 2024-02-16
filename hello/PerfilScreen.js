@@ -8,7 +8,7 @@ const PerfilScreen = () => {
   return (
     <View style={styles.container}>
       <Image style={styles.img} source={require('./assets/arnold.png')} />
-      <Text style={styles.test}>Mazotti</Text>
+      <Text style={styles.test}>Mazotti</Text>  
       <View style={styles.tabsContainer}>
         {/* Manter apenas a exibição do perfil, remover os botões de navegação */}
       </View>

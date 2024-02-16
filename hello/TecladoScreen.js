@@ -1,5 +1,3 @@
-// TecladoScreen.js
-
 import React, { useState } from 'react';
 import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
@@ -8,12 +6,10 @@ const TecladoScreen = () => {
   const [displayValue, setDisplayValue] = useState('');
 
   const handleButtonPress = (value) => {
-    // Adiciona o valor ao estado atual
     setDisplayValue((prevValue) => prevValue + value);
   };
 
   const handleDeletePress = () => {
-    // Remove o último caractere do estado atual
     setDisplayValue((prevValue) => prevValue.slice(0, -1));
   };
 
@@ -68,18 +64,17 @@ const TecladoScreen = () => {
         </TouchableOpacity>
       </View>
 
-      {displayValue.length > 0 && (
-        <View style={styles.row}>
+      <View style={styles.row}>
+        {displayValue.length > 0 && (
           <TouchableOpacity style={styles.deleteButton} onPress={handleDeletePress}>
             <Ionicons name="backspace" size={24} color="#fff" />
           </TouchableOpacity>
-        </View>
-      )}
-
-      <View style={styles.row}>
-        <TouchableOpacity style={styles.callButton} onPress={() => handleButtonPress('Chamada')}>
-          <Ionicons name="call" size={36} color="#fff" />
-        </TouchableOpacity>
+        )}
+        {displayValue.length > 0 && (
+          <TouchableOpacity style={styles.redButton} onPress={() => handleButtonPress('Chamada')}>
+            <Ionicons name="call" size={36} color="#fff" />
+          </TouchableOpacity>
+        )}
       </View>
     </View>
   );
@@ -109,15 +104,16 @@ const styles = StyleSheet.create({
     fontSize: 24,
     textAlign: 'center',
   },
-  callButton: {
-    backgroundColor: '#4CAF50',
+  redButton: {
+    backgroundColor: 'red',
     padding: 20,
-    borderRadius: 50,
-    flex: 1,
-    marginHorizontal: 152,
+    borderRadius: 35,
+    width: '40%',
+    alignSelf: 'center',
+    marginVertical: 10,
   },
   display: {
-    fontSize: 36,
+    fontSize: 26,
     color: '#000',
     textAlign: 'right',
     marginBottom: 20,
@@ -127,7 +123,7 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 70,
     flex: 1,
-    marginHorizontal: 8,
+    marginHorizontal: 120,
   },
 });
 

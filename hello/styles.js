@@ -43,13 +43,6 @@ export const styles = StyleSheet.create({
     padding: 13,
   },
 
-  textocontatos: {
-    color: '#fff',
-    fontSize: 25.5,
-    marginTop: 50,
-    marginRight: 280,
-    marginBottom: 1,
-  },
   input: {
     height: 35,
     width: 380,
