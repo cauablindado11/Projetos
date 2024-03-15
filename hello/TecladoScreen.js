@@ -64,15 +64,17 @@ const TecladoScreen = () => {
         </TouchableOpacity>
       </View>
 
-      <View style={styles.row}>
+      <View style={styles.bottomRow}>
+        <View style={styles.greenButtonContainer}>
+          
+          <TouchableOpacity style={styles.greenButton} onPress={() => handleButtonPress('Chamada')}>
+            <Ionicons name="call" size={36} color="#fff" />
+          </TouchableOpacity>
+
+        </View>
         {displayValue.length > 0 && (
           <TouchableOpacity style={styles.deleteButton} onPress={handleDeletePress}>
             <Ionicons name="backspace" size={24} color="#fff" />
-          </TouchableOpacity>
-        )}
-        {displayValue.length > 0 && (
-          <TouchableOpacity style={styles.redButton} onPress={() => handleButtonPress('Chamada')}>
-            <Ionicons name="call" size={36} color="#fff" />
           </TouchableOpacity>
         )}
       </View>
@@ -92,10 +94,16 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     marginBottom: 30,
   },
+  bottomRow: {
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginBottom: 30,
+  },
   button: {
     backgroundColor: '#C5C5C5',
     padding: 20,
-    borderRadius: 70,
+    borderRadius: 100,
     flex: 1,
     marginHorizontal: 8,
   },
@@ -104,13 +112,15 @@ const styles = StyleSheet.create({
     fontSize: 24,
     textAlign: 'center',
   },
-  redButton: {
-    backgroundColor: 'red',
+  greenButtonContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  greenButton: {
+    backgroundColor: 'green',
     padding: 20,
-    borderRadius: 35,
-    width: '40%',
-    alignSelf: 'center',
-    marginVertical: 10,
+    borderRadius: 55,
   },
   display: {
     fontSize: 26,
@@ -122,8 +132,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'red',
     padding: 20,
     borderRadius: 70,
-    flex: 1,
-    marginHorizontal: 120,
+    marginHorizontal: 8,
   },
 });
 

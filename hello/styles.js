@@ -1,13 +1,11 @@
-// styles.js
-
 import { StyleSheet } from 'react-native';
 
 export const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff', // Alterado para branco para o tema claro
-        justifyContent: 'center',
-      },    
+  container: {
+    flex: 10,
+    backgroundColor: '#fff',
+    justifyContent: 'center',
+  },
   scroll: {
     width: '100%',
   },
@@ -15,12 +13,13 @@ export const styles = StyleSheet.create({
     alignItems: 'center',
   },
   img: {
-    width: 200,
-    height: 200,
-    marginTop: 1,
+    width: 250,
+    height: 250,
     borderRadius: 500,
+    alignSelf: 'center', // horizontally center
+    marginTop: 20, // push to the top
   },
-  texto: {
+  textoWhite: {
     color: '#fff',
     fontSize: 25.5,
     marginTop: 55,
@@ -28,21 +27,19 @@ export const styles = StyleSheet.create({
     marginBottom: 1,
   },
   texto: {
-    color: '#000', // Alterado para preto para o tema claro
+    color: '#000',
     fontSize: 25.5,
     marginTop: 55,
     marginRight: 10,
     marginBottom: 1,
   },
-
   infoBloco: {
     borderWidth: 1,
-    backgroundColor: '#eee', // Alterado para cinza claro para o tema claro
+    backgroundColor: '#eee',
     borderRadius: 5,
     marginBottom: 15,
     padding: 13,
   },
-
   input: {
     height: 35,
     width: 380,
@@ -72,5 +69,70 @@ export const styles = StyleSheet.create({
   listanome: {
     color: '#fff',
     fontSize: 16,
+  },
+  img1: {
+    height: 40,
+    width: 40,
+    borderRadius: 10,
+  },
+  contato1: {
+    backgroundColor: '#fff',
+  },
+  test: {
+    fontSize: 32,
+    marginTop: 40,
+    marginLeft: 140,
+    marginTop: 20,
+  },
+  bottomContainer: {
+    marginTop: 20,
+    paddingHorizontal: 16,
+  },
+
+  contactInfoContainer: {
+    backgroundColor: '#F1F1F1',
+    height: 50,
+    width: '100%',
+    borderRadius: 5,
+    marginBottom: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  contactInfoContainer2: {
+    backgroundColor: '#F1F1F1',
+    height: 50,
+    width: '100%',
+    borderRadius: 5,
+    marginBottom: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+
+  otherNotesContainer: {
+    flexDirection: 'row',
+    justifyContent: 'space-evenly',
+    marginTop: 10,
+    marginBottom: 20, // Add bottom margin
+  },
+
+  otherNotesContainer3: {
+    backgroundColor: '#F1F1F1',
+    height: 50,
+    width: '100%',
+    borderRadius: 5,
+    marginBottom: 10,
+    marginTop: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 180,
+  },
+  sectionTitle:{
+marginRight: 325,
+marginTop: 10,
+  },
+  numerotitulo:{
+    marginRight: 265,
+    marginBottom: 20,
   },
 });
