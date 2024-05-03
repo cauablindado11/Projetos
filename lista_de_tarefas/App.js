@@ -15,7 +15,6 @@ const Navegacao = () => {
         barStyle={{ backgroundColor: 'white' }} // Define a cor da barra como branca
         activeColor="black" // Define a cor do texto como preto
         labeled={false} // Remove os subtitulos
-        // Você pode ajustar a cor da borda aqui se desejar
       >
         <Tab.Screen
           name="Tarefas"
